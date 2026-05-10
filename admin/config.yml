@@ -1,0 +1,158 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+locale: "ja"
+publish_mode: simple
+
+site_url: https://kai-shinkyuin.netlify.app
+display_url: https://kai-shinkyuin.netlify.app
+logo_url: /images/logo-placeholder.svg
+
+collections:
+  - name: "settings"
+    label: "🏥 院の基本情報"
+    description: "屋号・連絡先・住所・営業時間などを編集できます。変更したら必ず右上の「Publish」ボタンを押してください。"
+    files:
+      - file: "_data/settings.json"
+        label: "屋号・連絡先・営業時間"
+        name: "settings"
+        fields:
+          - { label: "屋号", name: "site_name", widget: "string", hint: "🏥 例: 鍼灸院・整骨院 かい" }
+          - { label: "サブタイトル(ロゴ下の小さい文字)", name: "site_subtitle", widget: "string", hint: "📍 例: 福岡市城南区長尾の鍼灸・整骨院" }
+          - { label: "院長氏名(挨拶セクション署名)", name: "owner_name", widget: "string", hint: "👤 例: 院長 福田 回" }
+          - { label: "院長氏名(ふりがな)", name: "owner_name_kana", widget: "string", required: false }
+          - { label: "キャッチコピー(トップ大見出し)", name: "catchcopy", widget: "string", hint: "✨ 例: \"心\"と\"体\"のバランスから..." }
+          - { label: "リード文(キャッチ下の説明)", name: "catchcopy_lead", widget: "text", hint: "📝 院の想い・特徴を2〜3行で" }
+          - { label: "電話番号", name: "phone", widget: "string", hint: "📞 例: 092-834-4378" }
+          - { label: "電話リンク(自動生成)", name: "phone_link", widget: "string", hint: "🔗 例: tel:0928344378" }
+          - { label: "メールアドレス", name: "email", widget: "string" }
+          - label: "住所"
+            name: "address"
+            widget: "object"
+            fields:
+              - { label: "ラベル", name: "label", widget: "string", hint: "例: 鍼灸院・整骨院 かい" }
+              - { label: "都道府県", name: "prefecture", widget: "string", hint: "例: 福岡県" }
+              - { label: "市区町村", name: "city", widget: "string", hint: "例: 福岡市城南区" }
+              - { label: "番地", name: "street", widget: "string", hint: "例: 長尾4-20-11" }
+          - { label: "住所(1行表記)", name: "address_full", widget: "string", hint: "📍 例: 福岡県福岡市城南区長尾4-20-11" }
+          - { label: "駐車場", name: "parking", widget: "string", hint: "🚗 例: 駐車場2台完備" }
+          - label: "営業時間(曜日ごと)"
+            name: "hours"
+            widget: "list"
+            hint: "⏰ 「日・祝」のように複数曜日まとめてOK"
+            fields:
+              - { label: "曜日", name: "day", widget: "string" }
+              - { label: "時間", name: "time", widget: "string" }
+          - { label: "夜間診療の説明", name: "hours_night", widget: "string", required: false }
+          - { label: "時間外・休日料金の説明", name: "hours_extra", widget: "string", required: false }
+          - label: "院内設備(箇条書き)"
+            name: "facility"
+            widget: "list"
+            field: { label: "項目", name: "item", widget: "string" }
+          - label: "強み・特徴(箇条書き)"
+            name: "qualifications"
+            widget: "list"
+            field: { label: "項目", name: "item", widget: "string" }
+          - label: "予約方法"
+            name: "reservation_methods"
+            widget: "list"
+            fields:
+              - { label: "ラベル", name: "label", widget: "string", hint: "例: 電話 / LINE" }
+              - { label: "表示する値", name: "value", widget: "string" }
+              - { label: "リンクURL(任意)", name: "link", widget: "string", required: false }
+          - { label: "院長挨拶(本文)", name: "owner_message", widget: "text", hint: "💬 院長からのメッセージ。3〜5行が目安" }
+
+  - name: "photos"
+    label: "📷 写真の差し替え"
+    description: "サイト内のすべての写真を差し替えられます。スマホからもアップ可能。"
+    files:
+      - file: "_data/photos.json"
+        label: "サイト内のすべての画像"
+        name: "photos"
+        fields:
+          - { label: "🏷 ロゴ画像(ヘッダー左上)", name: "logo_main", widget: "image", hint: "📐 推奨: 横長 220x60px(透明背景PNG/SVG)。公式ロゴをアップロードしてください。" }
+          - { label: "ヒーロー背景画像(全画面)", name: "hero_bg", widget: "image", hint: "📐 推奨: 横長 1920x1080px / 院内の落ち着いたシーンが最適" }
+          - { label: "ヒーロー前景画像", name: "hero_main", widget: "image", required: false }
+          - { label: "サービス画像 鍼灸", name: "service_shinkyu", widget: "image", required: false }
+          - { label: "サービス画像 手技療法", name: "service_shugi", widget: "image", required: false }
+          - { label: "サービス画像 整骨", name: "service_seikotsu", widget: "image", required: false }
+          - { label: "院内シーン カウンセリング", name: "scene_consult", widget: "image", required: false }
+          - { label: "院内シーン キッズルーム", name: "scene_kidsroom", widget: "image", required: false }
+          - { label: "院内シーン 施術室", name: "scene_room", widget: "image", required: false }
+          - { label: "院内シーン 落ち着いた空間", name: "scene_calm", widget: "image", required: false }
+          - { label: "院長写真", name: "owner_photo", widget: "image", required: false, hint: "📐 推奨: 縦長 600x800px / 顔写真があれば信頼感UP" }
+          - { label: "CTA背景画像", name: "cta_bg", widget: "image", required: false }
+          - { label: "OGP共有用画像(SNSシェア時の画像)", name: "og_image", widget: "image" }
+
+  - name: "services"
+    label: "🌿 施術メニュー(鍼灸・手技療法・整骨)"
+    description: "3つの施術メニューと対応症状を編集できます。"
+    files:
+      - file: "_data/services.json"
+        label: "施術内容一覧"
+        name: "services"
+        fields:
+          - label: "施術メニュー(複数追加可)"
+            name: "services"
+            widget: "list"
+            fields:
+              - { label: "ID(英数字)", name: "id", widget: "string", hint: "例: shinkyu" }
+              - { label: "メニュー名", name: "name", widget: "string", hint: "📝 例: 鍼灸" }
+              - { label: "サブタイトル(英語など)", name: "subtitle", widget: "string", hint: "例: Acupuncture & Moxibustion" }
+              - { label: "詳細説明", name: "lead", widget: "text" }
+              - label: "適応症状(箇条書き)"
+                name: "applicable"
+                widget: "list"
+                field: { label: "項目", name: "item", widget: "string" }
+          - label: "対応している症状(アイコン一覧)"
+            name: "symptoms"
+            widget: "list"
+            fields:
+              - { label: "アイコン文字(漢字1文字)", name: "icon", widget: "string", hint: "例: 腰" }
+              - { label: "ラベル", name: "label", widget: "string", hint: "例: 腰痛・肩こり" }
+
+  - name: "faq"
+    label: "❓ よくあるご質問"
+    description: "FAQの追加・編集が可能です。"
+    files:
+      - file: "_data/faq.json"
+        label: "FAQ"
+        name: "faq"
+        fields:
+          - label: "FAQ(複数追加可)"
+            name: "faqs"
+            widget: "list"
+            fields:
+              - { label: "質問", name: "q", widget: "string" }
+              - { label: "回答", name: "a", widget: "text" }
+
+  - name: "voices"
+    label: "💬 患者様の声"
+    description: "実際にいただいた患者様のお声を編集できます。"
+    files:
+      - file: "_data/voices.json"
+        label: "患者様の声"
+        name: "voices"
+        fields:
+          - label: "患者様の声(複数追加可)"
+            name: "voices"
+            widget: "list"
+            fields:
+              - { label: "コメント", name: "comment", widget: "text" }
+              - { label: "属性", name: "age", widget: "string", required: false, hint: "例: 40代女性" }
+              - { label: "在住エリア", name: "area", widget: "string", required: false, hint: "例: 城南区" }
+
+  - name: "news"
+    label: "📰 お知らせ・ブログ"
+    description: "新規投稿はここから。タイトルと本文を入力するだけ。"
+    folder: "_posts/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "タイトル", name: "title", widget: "string" }
+      - { label: "公開日", name: "date", widget: "datetime" }
+      - { label: "本文(マークダウン)", name: "body", widget: "markdown" }

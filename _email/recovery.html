@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【Liberta】パスワード設定のご案内</title>
+</head>
+<body style="font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic UI',sans-serif;color:#333;line-height:1.7;max-width:640px;margin:0 auto;padding:24px;background:#fff;">
+
+  <p style="font-size:15px;">{{ .Email }} 様</p>
+
+  <p>
+    Libertaをご利用いただき、ありがとうございます。<br>
+    パスワード設定のご依頼を承りました。
+  </p>
+
+  <div style="background:#1F4D2E;color:#fff;padding:24px;margin:24px 0;border-radius:8px;text-align:center;">
+    <h2 style="margin:0 0 16px;color:#fff;font-size:17px;">🔐 新しいパスワードを設定してください</h2>
+
+    <p style="margin:8px 0 20px;color:#cce0d2;font-size:14px;">
+      下のボタンをクリックすると、パスワード設定画面が開きます。
+    </p>
+
+    <p style="margin:0;">
+      <a href="{{ .ConfirmationURL }}" style="display:inline-block;background:#FFE066;color:#1F4D2E;padding:16px 36px;border-radius:6px;text-decoration:none;font-weight:bold;font-size:15px;">
+        パスワードを設定する →
+      </a>
+    </p>
+
+    <p style="margin:18px 0 0;color:#cce0d2;font-size:12px;">
+      ※ ボタンが表示されない場合は、以下のURLをブラウザに貼り付けてください<br>
+      <span style="word-break:break-all;color:#cce0d2;">{{ .ConfirmationURL }}</span>
+    </p>
+  </div>
+
+  <p style="margin-top:24px;font-size:13px;color:#666;">
+    心当たりがない場合は、このメールを破棄していただいて構いません。<br>
+    お客様のアカウント情報は変更されません。
+  </p>
+
+  <hr style="border:none;border-top:1px solid #E8DECF;margin:32px 0 16px;">
+  <p style="color:#888;font-size:12px;line-height:1.7;margin:0;">
+    Liberta<br>
+    内川<br>
+    <a href="mailto:k.uchikawa1010@gmail.com" style="color:#1F4D2E;">k.uchikawa1010@gmail.com</a><br>
+    <a href="https://libertahp.netlify.app" style="color:#1F4D2E;">https://libertahp.netlify.app</a>
+  </p>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "_note": "編集可能スロット。全画像はAI生成またはPexelsフリー素材のみ使用。顧客実画像は使用しない。",
+  "logo_main": "/images/logo-placeholder.svg",
+
+  "hero_bg": "/images/hero-bg.jpg",
+  "hero_main": "/images/hero-main.jpg",
+
+  "service_shinkyu": "/images/service-shinkyu.jpg",
+  "service_shugi": "/images/service-shugi.jpg",
+  "service_seikotsu": "/images/service-seikotsu.jpg",
+
+  "scene_consult": "/images/scene-consult.jpg",
+  "scene_kidsroom": "/images/scene-kidsroom.jpg",
+  "scene_room": "/images/scene-room.jpg",
+  "scene_calm": "/images/scene-calm.jpg",
+
+  "owner_photo": "/images/owner-placeholder.svg",
+
+  "cta_bg": "/images/cta-bg.jpg",
+
+  "og_image": "/images/og-image.jpg"
+}

@@ -1,0 +1,58 @@
+{
+  "_note": "公式HP(kaifuku-shinkyuin.com)記載の事実情報のみ。創作・推測なし。",
+
+  "site_name": "鍼灸院・整骨院　かい",
+  "site_subtitle": "福岡市城南区長尾の鍼灸・整骨院",
+  "owner_name": "院長　福田 回",
+  "owner_name_kana": "ふくだ かい",
+
+  "catchcopy": "\"心\"と\"体\"のバランスから、不調の原因を考える。",
+  "catchcopy_lead": "はり・きゅう・手技で、お一人おひとりに寄り添う治療を。安心、安全、リラックスできる空間で、本来の健やかさを取り戻すお手伝いをいたします。",
+
+  "phone": "092-834-4378",
+  "phone_link": "tel:0928344378",
+  "email": "shinkyuin.seikotsuin.kai@gmail.com",
+
+  "address": {
+    "prefecture": "福岡県",
+    "city": "福岡市城南区",
+    "street": "長尾4-20-11",
+    "label": "鍼灸院・整骨院 かい"
+  },
+  "address_full": "福岡県福岡市城南区長尾4-20-11",
+
+  "parking": "駐車場2台完備(道路側／店舗入口前)",
+
+  "hours": [
+    { "day": "月・火・金", "time": "9:00 〜 20:00" },
+    { "day": "水", "time": "9:00 〜 22:00" },
+    { "day": "木", "time": "13:00 〜 20:00" },
+    { "day": "土", "time": "9:00 〜 13:00" },
+    { "day": "日・祝", "time": "休診" }
+  ],
+  "hours_night": "夜間診療(完全予約制)月・火・水 22:00〜24:00 最終受付",
+  "hours_extra": "診療時間外 +500円／休日施術 +1,500円",
+
+  "facility": [
+    "待合室",
+    "キッズルーム",
+    "施術室3室",
+    "2階トレーニングスペース"
+  ],
+
+  "qualifications": [
+    "国家資格保有者による施術",
+    "鈴木式陶器灸採用(妊婦・お子様にも対応)",
+    "使い捨て鍼で衛生管理",
+    "交通事故・労災対応可"
+  ],
+
+  "reservation_methods": [
+    { "label": "電話", "value": "092-834-4378", "link": "tel:0928344378" },
+    { "label": "メール", "value": "shinkyuin.seikotsuin.kai@gmail.com", "link": "mailto:shinkyuin.seikotsuin.kai@gmail.com" },
+    { "label": "LINE", "value": "LINE公式アカウント", "link": "" },
+    { "label": "Instagram DM", "value": "Instagram", "link": "" }
+  ],
+
+  "owner_message": "患者さま一人一人のお身体のお悩みを解決すべく、一所懸命に施術していきます。安心、安全、そしてリラックスできる空間を目指しております。"
+}

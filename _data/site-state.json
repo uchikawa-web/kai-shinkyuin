@@ -1,0 +1,7 @@
+{
+  "state": "OFFER",
+  "expires_at": null,
+  "purchased_at": null,
+  "stripe_session_id": null,
+  "_note": "OFFER=営業送付済(プレビュー状態) / LIVE=決済完了 / EXPIRED=期限切れ"
+}

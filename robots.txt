@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /thanks.html
+
+Sitemap: https://kai-shinkyuin.netlify.app/sitemap.xml
