@@ -205,5 +205,28 @@
 </div>
 
 <script src="/js/main.js" defer></script>
+<!-- Cloudflare Web Analytics (admin-aware) -->
+<script>
+(function(){
+  try {
+    var params = new URLSearchParams(location.search);
+    if (params.get('liberta_admin') === 'on') {
+      localStorage.setItem('liberta_admin', 'true');
+      console.log('[Liberta Admin] beacon disabled for this domain');
+    }
+    if (params.get('liberta_admin') === 'off') {
+      localStorage.removeItem('liberta_admin');
+      console.log('[Liberta Admin] beacon re-enabled for this domain');
+    }
+    if (localStorage.getItem('liberta_admin') === 'true') { return; }
+  } catch(e) {}
+  var s = document.createElement('script');
+  s.defer = true;
+  s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+  s.setAttribute('data-cf-beacon', '{"token": "78677a880dd8474abbb5e636417bd651"}');
+  document.body.appendChild(s);
+})();
+</script>
+<!-- End Cloudflare Web Analytics -->
 </body>
 </html>
