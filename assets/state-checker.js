@@ -37,6 +37,13 @@
         if (meta && /noindex/i.test(meta.getAttribute('content') || '')) {
           meta.parentNode.removeChild(meta);
         }
+        // デモバナーを除去(購入後は非表示)
+        var banner = document.getElementById('liberta-demo-banner');
+        if (banner) {
+          banner.remove();
+          document.body.style.paddingTop = '';
+          document.body.classList.add('is-live');
+        }
         return;
       }
 
